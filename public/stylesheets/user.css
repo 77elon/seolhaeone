@@ -1,0 +1,24 @@
+body {
+    font-family: 'NanumBarunGothic';
+  }
+
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+  text-align: center;
+}
+
+.table td {
+  text-align: center;
+}
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: url('/fonts/Nanum/NanumBarunGothic.eot');
+    src: url('/fonts/Nanum/NanumBarunGothic.eot') format('embedded-opentype'),
+    url('/fonts/Nanum/NanumBarunGothic.woff') format('woff');
+  }
+  

@@ -33,7 +33,7 @@ app.use(session({
   resave: true,
   saveUninitialized: false,
   store: sessionStore,
-  cookie:{ expires : new Date(Date.now() + 24*hour)}                            
+  cookie:{ expires : new Date(Date.now() + 1/2*hour)}                            
 }))
 
 //parse requests

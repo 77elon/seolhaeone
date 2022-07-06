@@ -10,7 +10,13 @@ const crypto = require('crypto');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { error: false });
+  if (req.session.isLogined !== false && req.session.isLogined !== undefined){
+    res.render('video', {username:  req.session.author_id});
+  }
+  else
+  {
+    res.render('index', {error: false});
+  } 
 });
 
 router.post('/login', function (req, res, next) {
@@ -30,8 +36,9 @@ router.post('/login', function (req, res, next) {
       req.session.isLogined = true;
       //세션 스토어가 이루어진 후 redirect를 해야함.
       req.session.save(function(){
-        res.render('video', {username: result[0].userName});
+        //res.render('video', {username: result[0].userName});
         //router.replace('/');
+        res.redirect('/');
       });
     }
     else {

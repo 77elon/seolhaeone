@@ -1,15 +1,22 @@
 html
 	head
-		title= 'User List'
-		style
-			include style.css
+		link(href='/css/bootstrap/bootstrap.min.css' rel='stylesheet')
+		link(href='/stylesheets/user.css' rel='stylesheet')
+		script(src='/js/bootstrap/bootstrap.bundle.min.js')
 	body
-		h1= 'User List'
-	table
-		for user in userList
-			tr
-				td= user.userName
-				td
-					a(href='/user/'+user.userName) #{user.userName}
-				td= person.userPassword
-				td= person.ExpireDate
+		table.table.table-striped.table-responsive
+			- var i = 1;
+			thead
+				tr
+					th(scope='col') 순번
+					th(scope='col') 사용자 이름
+					th(scope='col') 접속 비밀번호
+					th(scope='col') 만료 날짜
+			tbody
+			for user in userList
+				tr
+					td= i++
+					td
+						a(href='/admin/user/'+user.userName) #{user.userName}
+					td= user.userPassword
+					td= user.ExpireDate

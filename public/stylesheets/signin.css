@@ -1,21 +1,15 @@
 html,
-.sign-in_container {
-  position: relative;
+body {
   height: 100%;
   font-family: 'NanumBarunGothic';
-  flex-direction: column;
   display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
+  flex-direction: column;
   -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
-}
-
-body {
-  font-family: 'NanumBarunGothic';
+  -webkit-box-pack: center;
+  align-content: space-around;
   background-color: #f5f5f5;
+  align-items: center;
 }
 
 .bg-video{
