@@ -1,0 +1,20 @@
+extends layout
+
+block head 
+    title 설해원 Only One Resort
+    link(href='/js/video.js/video-js.css' rel='stylesheet')
+    link(rel='stylesheet' href='/stylesheets/dt-theme.css' type='text/css' media='screen' charset='utf-8')
+
+
+block scripts
+    script(src='/js/video.js/video.js')
+    script.
+        window.HELP_IMPROVE_VIDEOJS = false;
+
+block content
+    .vjs-theme-dt
+        video.video-js(onloadstart="this.volume=0.5" controls='' preload='auto' poster='/images/landscape_1.jpg' data-setup='{}')
+            source(src='/videos/1.mp4' type='video/mp4')    
+
+
+

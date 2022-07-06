@@ -1,0 +1,61 @@
+body {
+  font-family: 'NanumBarunGothic';
+  background-color: #00000094;
+}
+
+.container {
+  position: relative;
+}
+
+.bg-video{
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+.font-bold {
+  font-family: 'NanumBarunGothic Bold';
+  font-weight: bold;
+}
+.font-bolder {
+  font-weight: bolder;
+}
+.font-lighter {
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('/fonts/Nanum/NanumBarunGothic.eot');
+  src: url('/fonts/Nanum/NanumBarunGothic.eot') format('embedded-opentype'),
+  url('/fonts/Nanum/NanumBarunGothic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic Bold';
+  src: url('/fonts/Nanum/NanumBarunGothicBold.eot');
+  src: url('/fonts/Nanum/NanumBarunGothicBold.eot') format('embedded-opentype'),
+  url('/fonts/Nanum/NanumBarunGothicBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Bold';
+  src: url('/fonts/SF-Pro/SF-Pro-Display-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Text Light';
+  src: url('/fonts/SF-Pro/SF-Pro-Text-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Text Regular';
+  src: url('/fonts/SF-Pro/SF-Pro-Text-Regular.woff2') format('woff2');
+}

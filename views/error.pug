@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title= error.status + " " + message
+    style(type='text/css').
+      html {
+      font-size: 62.5%;
+      }
+      body {
+      background-color: #f5f5f5;
+      color: #000;
+      font-family: 'NanumBarunGothic';
+      src: url('/fonts/NanumBarunGothic.eot');
+      src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),url('/fonts/NanumBarunGothic.woff') format('woff');
+      font-size: 1.4em;
+      line-height: 1.5;
+      }
+      .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      }
+      .emoji {
+      font-size: 9em;
+      text-align: center;
+      }
+      .title {
+      font-size: 3em;
+      text-align: center;
+      line-height: 0em;
+      color: grey;
+      }
+      .text {
+      text-align: center;
+      }
+  body.centered
+    .emoji 😭
+    h1.title Ooooops!
+    h1.text 잘못된 페이지 접근입니다.

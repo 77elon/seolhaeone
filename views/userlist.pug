@@ -1,0 +1,15 @@
+html
+	head
+		title= 'User List'
+		style
+			include style.css
+	body
+		h1= 'User List'
+	table
+		for user in userList
+			tr
+				td= user.userName
+				td
+					a(href='/user/'+user.userName) #{user.userName}
+				td= person.userPassword
+				td= person.ExpireDate
