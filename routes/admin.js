@@ -7,7 +7,9 @@ var router = express.Router();
 const crypto = require('crypto');
 
 router.get('/', function(req, res, next) {
-  if (req.session.a_isLogined !== false && req.session.a_isLogined !== undefined){
+  console.log(req.session.a_isLogined);
+  console.log(req.session.a_author_id);
+  if (req.session.a_isLogined === true && req.session.a_author_id !== undefined){
     res.render('mgmt', {username:  req.session.a_author_id});
   }
   else
@@ -35,9 +37,9 @@ router.post('/login', function (req, res, next) {
       req.session.a_isLogined = true;
       //세션 스토어가 이루어진 후 redirect를 해야함.
       req.session.save(function(){
-        //res.render('mgmt', {username: result[0].adminName});
+        res.render('mgmt', {username: result[0].adminName});
         //router.replace('/');
-        res.redirect('/admin');
+        //res.redirect('/admin');
       });
     }
     else {
@@ -70,7 +72,7 @@ router.get('/user', function(req, res, next) {
           userList.push(person);
         }
         //console.log(userList);
-        res.render('userlist', {"userList": userList});
+        res.render('userlist', {userList: userList, username: req.session.a_author_id});
       }
     });
   }

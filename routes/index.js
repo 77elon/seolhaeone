@@ -4,13 +4,14 @@ var express = require('express');
 var router = express.Router();
 
 var moment = require('moment');
-var now = moment(Date.now()).format('YYYY-MM-DD');
+const hour = 3600000;
+var now = moment(Date.now() + 9*hour).format('YYYY-MM-DD');
 
 const crypto = require('crypto');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  if (req.session.isLogined !== false && req.session.isLogined !== undefined){
+  if (req.session.isLogined === true && req.session.author_id !== undefined){
     res.render('video', {username:  req.session.author_id});
   }
   else
@@ -47,18 +48,4 @@ router.post('/login', function (req, res, next) {
   });
 });
 
-
-/* router.get('/select', function(req, res) {
-  maria.query('SELECT userName FROM userinfo where userPassword=? ','randompw', function(err, rows, fields) {
-    if(!err) {
-      //console.log(rows);
-      //console.log(rows[0].userName);
-      res.send(rows); // responses send rows
-    } else {
-      console.log("err : " + err);
-      res.send(err);  // response send err
-    }
-  });
-});
-*/
 module.exports = router;

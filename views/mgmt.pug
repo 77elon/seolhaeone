@@ -3,19 +3,7 @@ extends mgmt_layout
 block head 
     title 설해원 Only One Resort 관리페이지
 
-block nav 
-  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.flex-row
-    .container
-      a.navbar-brand(href='/admin').font-bold.fs-2 관리페이지
-      ul.navbar-nav.mr-auto
-        li.nav-item
-          a.nav-link(href='/admin/user').fs-5 사용자 목록
-        li.nav-item.dropdown
-          a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false').fs-5 안녕하세요, #{username}님!
-          ul.dropdown-menu.dropdown-menu-end(aria-labelledby='navbarDropdown')
-            li
-              a.dropdown-item 정보 변경
-            li
-              hr.dropdown-divider
-            li
-            a.dropdown-item(href='#') 로그아웃
+block contents 
+  div#intro.bg-video.opacity-75
+      video(style='width: 100%;' playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop')
+        source(src='/videos/brochure.mp4' type='video/mp4')

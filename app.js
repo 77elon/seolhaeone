@@ -30,10 +30,10 @@ const hour = 3600000;
 app.use(session({                               
   key: "seolhaeone",
   secret: "e0cac8a6b18e1f6b3e082c7aef2da6ce6bef674db00893223f5640a158d676a36153fc269c0aee6399d623bdf4ba9356",
-  resave: true,
+  resave: false,
   saveUninitialized: false,
   store: sessionStore,
-  cookie:{ expires : new Date(Date.now() + 1/2*hour)}                            
+  cookie:{ expires : new Date(Date.now() + 9*hour + 1/2*hour)}                            
 }))
 
 //parse requests
