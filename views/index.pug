@@ -10,13 +10,12 @@ block content
     if error
         script.
             alert('정상적인 코드가 아니거나, 만료된 코드 입니다.');
-    .text-center
-        h3.mb-4 "설악산(雪)과 동해(海)를 품은 쉼의 정원(園)"
-        h3.mb-4 대한민국 강원도 양양에 위치한, 설악산과 동해의 자연을 품은 사계절 내내 골프와 온천을 즐길 수 있는 종합 휴양 리조트
-        h1.mb-4.font-bolder 설해원 雪海園
+    figures.text-center
+        .display-6.mb-3 "설악산(雪)과 동해(海)를 품은 쉼의 정원(園)"
+        .display-6.mb-5 대한민국 강원도 양양에 위치한, 설악산과 동해의 자연을 품은 사계절 내내 골프와 온천을 즐길 수 있는 종합 휴양 리조트
+        .display-2.mb-5.font-bold 설해원 雪海園
     img.mb-4(src='/images/img_03.png' alt='')
     .col-md-3
         form(class="form-signin" method="POST" action="/login")
-            input#inputPassword.form-control(name="password", type='id' placeholder='입장 코드' required='' autofocus='1' style='text-transform:uppercase')
-            p
+            input#inputPassword.mb-4.form-control(name="password", type='id' placeholder='입장 코드' required='' autofocus='1' style='text-transform:uppercase')
             button.btn.btn-lg.btn-dark.form-control(type='submit') 입장

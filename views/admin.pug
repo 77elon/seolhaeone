@@ -7,11 +7,11 @@ block content
     if error
         script.
             alert('아이디와 비밀번호를 확인해주세요.');
-    .text-center
-        h1.mb-4.font-bold 관리자 페이지
+    figures.text-center
+        .display-2.mb-5.font-bold 관리자 페이지
         img.mb-4(src='/images/img_03.png' alt='')
-        form(class="form-signin" method="POST" action="/admin/login")
-            input#inputID.form-control(name="userID", type='userid' placeholder='관리자 아이디' required='' autofocus='1')
-            input#inputPassword.form-control(name="password", type='password' placeholder='관리자 비밀번호' required='')
-            p
-            button.btn.btn-lg.btn-dark.form-control(type='submit') 로그인
+
+    form(class="form-signin" method="POST" action="/admin/login")
+        input#inputID.mb-2.form-control(name="userID", type='userid' placeholder='관리자 아이디' required='' autofocus='1')
+        input#inputPassword.mb-5.form-control(name="password", type='password' placeholder='관리자 비밀번호' required='')
+        button.btn.btn-lg.btn-dark.form-control(type='submit') 로그인
