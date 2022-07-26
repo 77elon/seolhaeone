@@ -1,12 +1,73 @@
-table,
-thead,
-tr,
-tbody,
-th,
-td {
-  text-align: center;
+html,
+body {
+  font-family: 'NanumBarunGothic';
 }
 
-.table td {
-  text-align: center;
+.container {
+  position: relative;
+  
+}
+
+.font-normal {
+  font-weight: normal;
+}
+.font-bold {
+  font-family: 'NanumBarunGothic Bold';
+}
+.font-bolder {
+  font-weight: bolder;
+}
+.font-lighter {
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('/fonts/Nanum/NanumBarunGothic.eot');
+  src: url('/fonts/Nanum/NanumBarunGothic.eot') format('embedded-opentype'),
+  url('/fonts/Nanum/NanumBarunGothic.woff') format('woff');
+}
+@font-face {
+  font-family: 'NanumBarunGothic Bold';
+  src: url('/fonts/Nanum/NanumBarunGothicBold.eot');
+  src: url('/fonts/Nanum/NanumBarunGothicBold.eot') format('embedded-opentype'),
+  url('/fonts/Nanum/NanumBarunGothicBold.woff') format('woff');
+}
+
+
+#customForm {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#customForm fieldset {
+  flex: 1;
+  border: 1px solid #aaa;
+  margin: 0.5em;
+}
+
+#customForm fieldset legend {
+  padding: 5px 20px;
+  border: 1px solid #aaa;
+  font-weight: bold;
+}
+
+#customForm fieldset.name {
+  flex: 2 100%;
+}
+
+#customForm fieldset.name legend {
+  background: #bfffbf;
+}
+
+#customForm fieldset.office legend {
+  background: #ffffbf;
+}
+
+#customForm fieldset.hr legend {
+  background: #ffbfbf;
+}
+
+#customForm div.DTE_Field {
+  padding: 5px;
 }

@@ -2,24 +2,37 @@ extends mgmt_layout
 
 block head 
     title 설해원 Only One Resort
-    link(href='/css/bootstrap/bootstrap.min.css' rel='stylesheet')
-    link(href='/stylesheets/user.css' rel='stylesheet')
-    script(src='/js/bootstrap/bootstrap.bundle.min.js')
+
+    script(src='https://unpkg.com/babel-standalone@6.26.0/babel.min.js')
+    script(src='https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.js')
+    script(src='https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js')
+    link(rel='stylesheet' href='https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css')
+
+    link(rel='stylesheet' href="https://uicdn.toast.com/tui.date-picker/v4.1.0/tui-date-picker.css")
+    link(rel='stylesheet' href="https://uicdn.toast.com/tui.time-picker/v2.0.3/tui-time-picker.css")
+    script(src='https://uicdn.toast.com/tui.time-picker/v2.0.3/tui-time-picker.js')
+    script(src='https://uicdn.toast.com/tui.date-picker/v4.1.0/tui-date-picker.js')
+
+    link(rel='stylesheet' href='/css/tui-grid/tui-grid.css')
+    script(src='/js/tui-grid/tui-grid.js')
+
+    link(href='/stylesheets/web.css' rel='stylesheet')
 
 block contents
-    table.table.table-striped.table-responsive
-        - var i = 1;
-        thead
-            tr
-            th(scope='col') 순번
-            th(scope='col') 사용자 이름
-            th(scope='col') 접속 비밀번호
-            th(scope='col') 만료 날짜
-        tbody
-        for user in userList
-            tr
-            td= i++
-            td= user.userName
-                //a(href='/admin/user/'+user.userName) #{user.userName}
-            td= user.userPassword
-            td= user.ExpireDate
+    .user-list.p-5
+        h3.font-bold 사용자 목록
+        .container#grid.p-5
+        .h-container.col-5
+            //button#check.btn.btn-lg.btn-dark 조회
+            button#append.btn.btn-lg.btn-dark 행 추가
+            button#delete.btn.btn-lg.btn-dark 행 삭제
+            button#modify.btn.btn-lg.btn-dark 행 수정
+
+
+
+
+    script(src="/js/jquery/jquery.js") 
+    script(src="/scripts/userlist.js")
+
+    include ./info.pug
+

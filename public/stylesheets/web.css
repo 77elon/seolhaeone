@@ -1,10 +1,55 @@
+html,
 body {
   font-family: 'NanumBarunGothic';
-  background-color: #00000094;
+}
+
+.gray-bg{
+  background-color: gainsboro;
 }
 
 .container {
   position: relative;
+}
+
+.h-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+.tui-grid-container,
+.tui-grid-container p,
+.tui-grid-container input,
+.tui-grid-container textarea {
+  width: 100%;
+  position: relative;
+  font-size: 19px;
+  text-align: center;
+  font-family: 'NanumBarunGothic';
+}
+
+.user-list {
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: stretch;
+}
+
+.min-vh-25 { 
+  min-height: 25vh; 
+}
+
+.min-vh-50 { 
+  min-height: 50vh; 
+}
+
+.min-vh-75 { 
+  min-height: 75vh; 
 }
 
 .bg-video{
@@ -22,7 +67,6 @@ body {
 }
 .font-bold {
   font-family: 'NanumBarunGothic Bold';
-  font-weight: bold;
 }
 .font-bolder {
   font-weight: bolder;

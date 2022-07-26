@@ -27,7 +27,6 @@ body {
 }
 .font-bold {
   font-family: 'NanumBarunGothic Bold';
-  font-weight: bold;
 }
 .font-bolder {
   font-weight: bolder;
@@ -77,6 +76,6 @@ body {
   font-family: 'VideoJS';
   src: url('http://vjs.zencdn.net/f/1/vjs.eot');
   src: url('http://vjs.zencdn.net/f/1/vjs.eot?#iefix') format('embedded-opentype'), 
-    url('http://vjs.zencdn.net/f/1/vjs.woff') format('woff'),     
-    url('http://vjs.zencdn.net/f/1/vjs.ttf') format('truetype');
+  url('http://vjs.zencdn.net/f/1/vjs.woff') format('woff'),     
+  url('http://vjs.zencdn.net/f/1/vjs.ttf') format('truetype');
 }

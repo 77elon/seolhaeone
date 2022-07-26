@@ -1,4 +1,4 @@
-extends layout
+extends video_layout
 
 block head 
     title 설해원 Only One Resort
@@ -8,13 +8,38 @@ block head
 
 block scripts
     script(src='/js/video.js/video.js')
+    script(src='/js/video.js-playlist/videojs-playlist.min.js')
+
+
+
+block contents
+    .vjs-theme-dt.bg-video
+        video#player.video-js(onloadstart="this.volume=0.3" data-setup='{}')
     script.
+        //document.getElementById("player").muted = false;
+
         window.HELP_IMPROVE_VIDEOJS = false;
-
-block content
-    .vjs-theme-dt
-        video.video-js(onloadstart="this.volume=0.5" controls='' preload='auto' poster='/images/landscape_1.jpg' data-setup='{}')
-            source(src='/videos/1.mp4' type='video/mp4')    
-
+        var player = videojs("player", {
+            "controls": true,
+            fluid: true});
+        player.ready(function() {
+            this.play();
+        });
+        player.playlist([
+            {
+                sources: [{
+                    src: './videos/1.mp4',
+                    type: 'video/mp4'
+                }],
+                poster: './images/bg_01.png'
+            },
+            {
+                sources: [{
+                    src: './videos/2.mp4',
+                    type: 'video/mp4'
+                }]
+            }]);
+        player.playlist.autoadvance(0);
+        player.playlist.repeat(false);
 
 

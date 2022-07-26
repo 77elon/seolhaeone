@@ -1,6 +1,6 @@
 const maria = require('mysql');
-const conn = maria.createConnection({
-    host:'10.0.1.193',
+const conn = maria.createPool({
+    host:'10.10.0.111',
     port:3306,
     user:'root',
     password:'VegaIron2!',

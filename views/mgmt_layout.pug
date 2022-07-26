@@ -5,10 +5,11 @@ head
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width')
     link(href='/css/bootstrap/bootstrap.min.css' rel='stylesheet')
-    link(href='/stylesheets/web.css' rel='stylesheet')
     block head
     script(src='/js/bootstrap/bootstrap.bundle.min.js')
     block scripts 
+    link(href='/stylesheets/user.css' rel='stylesheet')
+
 body
     nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.flex-row
         .container
@@ -16,6 +17,9 @@ body
                 ul.navbar-nav.mr-auto
                     li.nav-item
                     a.nav-link(href='/admin/user').fs-5 사용자 목록
+                    li.nav-item
+                    a.nav-link(href='/admin/adminlist').fs-5 관리자 목록
+                    
                     li.nav-item.dropdown
                     a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false').fs-5 안녕하세요, #{username}님!
                     ul.dropdown-menu.dropdown-menu-end(aria-labelledby='navbarDropdown')
@@ -24,8 +28,9 @@ body
                         li
                         hr.dropdown-divider
                         li
-                        a.dropdown-item(href='#') 로그아웃
+                        a.dropdown-item(href='./logout') 로그아웃
     block contents
+
 
 
 

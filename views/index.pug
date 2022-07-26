@@ -2,6 +2,7 @@ extends layout
 
 block head 
     script(src='https://stacksnippets.net/scripts/snippet-javascript-console.min.js')
+    script(src='/scripts/login.js')
     title 설해원 Only One Resort
     
 
@@ -12,21 +13,10 @@ block content
     .text-center
         h3.mb-4 "설악산(雪)과 동해(海)를 품은 쉼의 정원(園)"
         h3.mb-4 대한민국 강원도 양양에 위치한, 설악산과 동해의 자연을 품은 사계절 내내 골프와 온천을 즐길 수 있는 종합 휴양 리조트
-        h1.mb-4.font-bold 설해원 雪海園
+        h1.mb-4.font-bolder 설해원 雪海園
     img.mb-4(src='/images/img_03.png' alt='')
     .col-md-3
         form(class="form-signin" method="POST" action="/login")
             input#inputPassword.form-control(name="password", type='id' placeholder='입장 코드' required='' autofocus='1' style='text-transform:uppercase')
+            p
             button.btn.btn-lg.btn-dark.form-control(type='submit') 입장
-    
-    script(type='text/javascript').
-        document.addEventListener("DOMContentLoaded", () => {
-            const input = document.querySelector("#inputPassword");
-            input.addEventListener('input', (e) => {
-                if (e.target.value)
-                {
-                    const x = e.target.value.replace(/[^a-zA-Z_0-9,\.]/g, '').match(/(\w{0,3})(\w{0,3})/);
-                    e.target.value = !x[2] ? x[1] :  x[1] + (x[2] ? '-' + x[2] : '');
-                }
-            });
-        });
